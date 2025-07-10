@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servidor-c
+  namespace: scalability-test
+  labels:
+    app: servidor-c
+    component: scalability-test
+    language: c
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servidor-c
+  template:
+    metadata:
+      labels:
+        app: servidor-c
+        component: scalability-test
+        language: c
+    spec:
+      containers:
+      - name: servidor-c
+        image: guimsk/servidor:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+          name: server-port
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        env:
+        - name: PORT
+          value: "5000"
+        - name: MAX_CONNECTIONS
+          value: "1000"
+        livenessProbe:
+          tcpSocket:
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          tcpSocket:
+            port: 5000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: servidor-c-service
+  namespace: scalability-test
+  labels:
+    app: servidor-c
+    component: scalability-test
+spec:
+  selector:
+    app: servidor-c
+  ports:
+  - port: 5000
+    targetPort: 5000
+    protocol: TCP
+    name: server-port
+  type: ClusterIP

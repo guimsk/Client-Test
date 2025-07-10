@@ -1,0 +1,2 @@
+scenario_id,language,num_servers,num_clients,messages_per_client,run_number,success,duration,latency_avg,latency_min,latency_max,latency_median,latency_stddev,throughput,messages_sent,messages_received,server_ports,container_ids,error_message
+c_2s_10c_1m_r1,c,2,10,1,1,False,0,0,0,0,0,0,0,0,0,,,Falha no deploy de servidores
