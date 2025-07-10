@@ -3,7 +3,7 @@ version: '3.9'
 
 services:
   servidor:
-    image: ${DOCKERHUB_USER:-guimsk}/servidorCpp:latest
+    image: ${DOCKERHUB_USER:-guimsk}/servidor-cpp:latest
     container_name: servidor_app
     ports:
       - "5000:5000"

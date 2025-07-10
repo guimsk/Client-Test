@@ -85,11 +85,11 @@ class SystemConfig:
             return f"{self.DOCKER_USERNAME}/cliente:latest"
         elif component == "servidor":
             if language == "c":
-                return f"{self.DOCKER_USERNAME}/servidor:latest"
+                return f"{self.DOCKER_USERNAME}/servidor-c:latest"
             elif language == "cpp":
-                return f"{self.DOCKER_USERNAME}/servidorCpp:latest"
+                return f"{self.DOCKER_USERNAME}/servidor-cpp:latest"
             else:
-                return f"{self.DOCKER_USERNAME}/servidor:latest"
+                return f"{self.DOCKER_USERNAME}/servidor-c:latest"
         else:
             # Fallback para componentes não conhecidos
             if language:

@@ -336,6 +336,7 @@ class KubernetesManager:
                             "ports": [{"containerPort": port}],
                             "args": [str(port)],
                             "env": [
+                                {"name": "PORT", "value": str(port)},
                                 {"name": "MAX_CONNECTIONS", "value": "1000"},
                                 {"name": "THREAD_POOL_SIZE", "value": "50"}
                             ],

@@ -19,4 +19,6 @@ RUN g++ -std=c++17 -pthread app_configurable.cpp -o servidor
 EXPOSE 8000
 
 # Comando padrão para executar o servidor
-CMD ["./servidor", "8000"]
+# A porta será passada como argumento pelo Kubernetes
+ENTRYPOINT ["./servidor"]
+CMD ["8000"]

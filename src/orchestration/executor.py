@@ -140,9 +140,9 @@ class TestExecutor:
             
             # Determinar imagem do servidor
             if scenario.language == "cpp":
-                server_image = "guimsk/servidorCpp:latest"
+                server_image = "guimsk/servidor-cpp:latest"
             elif scenario.language == "c":
-                server_image = "guimsk/servidor:latest"
+                server_image = "guimsk/servidor-c:latest"
             else:
                 raise ValueError(f"Unsupported language: {scenario.language}")
             

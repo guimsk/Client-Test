@@ -33,7 +33,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: servidor
-        image: guimsk/servidorCpp:latest
+        image: guimsk/servidor-cpp:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

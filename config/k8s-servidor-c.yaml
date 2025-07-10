@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: servidor-c
-        image: guimsk/servidor:latest
+        image: guimsk/servidor-c:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

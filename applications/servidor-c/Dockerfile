@@ -20,4 +20,6 @@ RUN gcc -std=c99 -pthread -O2 app_configurable.c -o servidor
 EXPOSE 8000
 
 # Define o comando para executar o servidor
-CMD ["./servidor", "8000"]
+# A porta será passada como argumento pelo Kubernetes
+ENTRYPOINT ["./servidor"]
+CMD ["8000"]
