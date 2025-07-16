@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cliente
+  namespace: scalability-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cliente
+  template:
+    metadata:
+      labels:
+        app: cliente
+    spec:
+      containers:
+      - name: cliente
+        image: guimsk/cliente:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 681Mi
+          limits:
+            cpu: 200m
+            memory: 1362Mi
+      env:
+        - name: CLIENT_MODE
+          value: "benchmark"

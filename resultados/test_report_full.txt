@@ -1,0 +1,757 @@
+🚀 Iniciando Sistema de Testes Unificado...
+🧪 SISTEMA DE TESTES UNIFICADO E COMPLETO
+======================================================================
+📋 Executando verificação abrangente de todos os componentes...
+
+
+🔧 Configuração e Imports
+======================================================================
+✅ Import config: Módulo importado com sucesso
+✅ Factory config: Função factory funcional
+✅ Import infrastructure_manager: Módulo importado com sucesso
+✅ Factory infrastructure_manager: Função factory funcional
+✅ Import test_executor: Módulo importado com sucesso
+✅ Import concurrency_manager: Módulo importado com sucesso
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+✅ Factory concurrency_manager: Função factory funcional
+✅ Import result_analyzer: Módulo importado com sucesso
+📊 Carregados 60 resultados
+✅ Factory result_analyzer: Função factory funcional
+✅ Import chart_generator: Módulo importado com sucesso
+📊 Carregados 60 resultados para gráficos 3D interativos
+🔍 Colunas disponíveis: ['scenario_id', 'language', 'num_servers', 'num_clients', 'messages_per_client', 'run_number', 'success', 'duration', 'latency_avg', 'latency_min', 'latency_max', 'latency_median', 'latency_stddev', 'throughput', 'messages_sent', 'messages_received', 'server_ports', 'container_ids', 'error_message']
+🏷️  Linguagens: ['c']
+🖥️  Servidores: [2]
+👥 Clientes: [10]
+✅ Factory chart_generator: Função factory funcional
+✅ Import resource_monitor: Módulo importado com sucesso
+✅ Factory resource_monitor: Função factory funcional
+✅ Config.LANGUAGES: Atributo presente: ['c', 'cpp']
+✅ Config.SERVERS: Atributo presente: [2, 4, 6, 8, 10]
+✅ Config.CLIENTS: Atributo presente: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+✅ Config.MESSAGES: Atributo presente: [1, 10, 100, 500, 1000, 10000]
+✅ Config.DOCKER_USERNAME: Atributo presente: guimsk
+✅ Config.K8S_NAMESPACE: Atributo presente: scalability-test
+✅ Config.RESULTS_DIR: Atributo presente: /home/guimsk/Faculdade/Rede de computadores/TarefaV4/core/resultados
+❌ Config Paralela: Execução paralela ainda ativa
+❌ Config Batch: Batch size alto: 5
+
+🐳 Docker e Containers
+======================================================================
+✅ Docker Instalação: Docker disponível: Docker version 28.1.1, build 4eba377
+✅ Docker Daemon: Docker daemon ativo
+✅ Docker Image guimsk/servidor-c:latest: Imagem encontrada
+✅ Docker Image guimsk/servidor-cpp:latest: Imagem encontrada
+✅ Docker Image guimsk/cliente:latest: Imagem encontrada
+✅ DockerManager: Classe instanciada com sucesso
+✅ DockerManager.build_and_push_all: Método disponível
+✅ DockerManager.build_image: Método disponível
+✅ DockerManager.push_image: Método disponível
+
+☸️  Kubernetes
+======================================================================
+✅ kubectl: Cliente kubectl disponível
+✅ K8s Cluster: Cluster acessível
+✅ K8s Nodes: 1 nodes disponíveis
+✅ K8s Namespace: Namespace scalability-test existe
+✅ KubernetesManager: Classe instanciada com sucesso
+✅ K8sManager.setup_namespace: Método disponível
+✅ K8sManager.deploy_server: Método disponível
+✅ K8sManager.cleanup_resources: Método disponível
+
+🏗️  Infraestrutura
+======================================================================
+✅ InfrastructureManager: Instância criada com sucesso
+✅ InfraManager.docker: DockerManager presente
+✅ InfraManager.k8s: KubernetesManager presente
+✅ InfraManager.setup_infrastructure: Método disponível
+✅ InfraManager.cleanup_all: Método disponível
+✅ InfraManager.build_and_push_all: Método disponível
+✅ InfraManager.deploy_servers: Método disponível
+✅ InfraManager.wait_for_pods_ready: Método disponível
+
+🧠 Gerenciamento de Concorrência
+======================================================================
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+✅ ConcurrencyManager: Instância criada com sucesso
+✅ ConcurrencyManager.status: Status de recursos funcional
+🔒 Pod slot adquirido (1/12)
+🔓 Pod slot liberado (0/12)
+✅ ConcurrencyManager.pods: Controle de pod slots funcional
+🧪 Teste slot adquirido (1/3)
+🧪 Teste slot liberado (0/3)
+✅ ConcurrencyManager.tests: Controle de test slots funcional
+✅ ConcurrencyManager.adapt: Sistema de adaptação funcional
+
+⚡ Executor de Testes
+======================================================================
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+🧠 Executor com controle de concorrência inteligente inicializado
+✅ TestExecutor: Instância criada com sucesso
+✅ TestScenario: Cenário criado com sucesso
+✅ TestExecutor.run_all_tests: Método disponível
+✅ TestExecutor.run_single_scenario: Método disponível
+✅ TestExecutor.get_results: Método disponível
+
+📊 Análise de Resultados
+======================================================================
+📊 Carregados 0 resultados
+✅ ResultAnalyzer: Instância criada com sucesso
+✅ ResultAnalyzer.analyze_results: Método disponível
+✅ ResultAnalyzer.generate_summary: Método disponível
+✅ ResultAnalyzer.export_results: Método disponível
+
+📈 Geração de Gráficos
+======================================================================
+📊 Carregados 0 resultados para gráficos 3D interativos
+🔍 Colunas disponíveis: ['scenario_id', 'language', 'num_servers', 'num_clients', 'messages_per_client', 'run_number', 'success', 'duration', 'latency_avg', 'latency_min', 'latency_max', 'latency_median', 'latency_stddev', 'throughput', 'messages_sent', 'messages_received', 'server_ports', 'container_ids', 'error_message']
+🏷️  Linguagens: []
+🖥️  Servidores: []
+👥 Clientes: []
+✅ ChartGenerator: Instância criada com sucesso
+✅ ChartGenerator.plotly: Plotly disponível
+✅ ChartGenerator.pandas: Pandas disponível
+✅ ChartGenerator.3d: Método de gráficos 3D disponível
+
+🔍 Monitor de Recursos
+======================================================================
+✅ ResourceMonitor: Instância criada com sucesso
+✅ ResourceMonitor.psutil: Psutil disponível
+
+🌐 Aplicações (Cliente/Servidor)
+======================================================================
+✅ App Dir applications/cliente: Diretório presente
+✅ App File applications/cliente/app.py: Arquivo presente
+✅ App File applications/cliente/Dockerfile: Arquivo presente
+✅ App Dir applications/servidor: Diretório presente
+✅ App File applications/servidor/Dockerfile: Arquivo presente
+✅ App Dir applications/servidor-c: Diretório presente
+✅ App File applications/servidor-c/Dockerfile: Arquivo presente
+
+📁 Estrutura de Arquivos
+======================================================================
+✅ File core/config.py: Arquivo presente
+✅ File core/infrastructure_manager.py: Arquivo presente
+✅ File core/test_executor.py: Arquivo presente
+✅ File core/concurrency_manager.py: Arquivo presente
+✅ File core/result_analyzer.py: Arquivo presente
+✅ File core/chart_generator.py: Arquivo presente
+✅ File core/resource_monitor.py: Arquivo presente
+✅ File executar.py: Arquivo presente
+✅ File requirements.txt: Arquivo presente
+✅ Dir config: Diretório presente
+✅ Dir applications: Diretório presente
+✅ Dir resultados: Diretório presente
+
+🔌 Consistência de Configurações
+======================================================================
+✅ Port config.py: Porta 8000 presente
+✅ Port applications/servidor/Dockerfile: Porta 8000 presente
+✅ Port applications/servidor-c/Dockerfile: Porta 8000 presente
+
+💾 Persistência de Dados
+======================================================================
+✅ Data Results Dir: Diretório de resultados existe
+✅ Data Graphics Dir: Diretório de gráficos existe
+
+🔐 Segurança e Validações
+======================================================================
+✅ Security sudo: Nenhum sudo hardcoded encontrado
+
+⚡ Performance e Recursos
+======================================================================
+✅ Perf Pods: Limite conservador de pods: 10
+⚠️  Perf Threads: Muitas threads configuradas
+
+🔄 Integração Entre Componentes
+======================================================================
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+🧠 Executor com controle de concorrência inteligente inicializado
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+✅ Integration Chain: Cadeia de componentes funcional
+✅ Integration Executor-Concurrency: Executor usa concorrência
+
+📝 Versões e Compatibilidade
+======================================================================
+✅ Python Version: 3.12.3
+✅ Docker Version: Docker version 28.1.1, build 4eba377
+✅ kubectl Version: Client Version: v1.30.0
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.29.2
+✅ Kubernetes Version: Server Version: v1.29.2
+⚠️  Python Dependencies: Versões diferentes: ['scipy==1.11.4 (requerido >= 1.7.0)', 'json5==0.12.0 (requerido >= 0.9.0)']
+✅ Core Imports: Todos os módulos principais importados
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+🧹 Limpando dados anteriores...
+✅ Dados anteriores limpos
+🧠 Executor com controle de concorrência inteligente inicializado
+📊 Carregados 0 resultados
+📊 Carregados 0 resultados para gráficos 3D interativos
+🔍 Colunas disponíveis: ['scenario_id', 'language', 'num_servers', 'num_clients', 'messages_per_client', 'run_number', 'success', 'duration', 'latency_avg', 'latency_min', 'latency_max', 'latency_median', 'latency_stddev', 'throughput', 'messages_sent', 'messages_received', 'server_ports', 'container_ids', 'error_message']
+🏷️  Linguagens: []
+🖥️  Servidores: []
+👥 Clientes: []
+✅ Core API Integration: Módulos principais integrados
+
+🔒 Robustez e Recuperação
+======================================================================
+⚠️  Robustness Error Handling: Nenhum bloco try/except encontrado nos módulos principais
+✅ Robustness Recovery: Métodos de recuperação presentes
+✅ Robustness Timeouts: Timeouts configurados
+
+📋 Qualidade do Código
+======================================================================
+⚠️  Quality Documentation: Documentação limitada (25%)
+✅ Quality File Size: Tamanhos de arquivo OK
+✅ Quality Imports: Estrutura de imports OK
+
+🌍 Ambiente e Dependências
+======================================================================
+✅ Environment Required: Variáveis requeridas OK
+✅ Environment Optional: Variáveis opcionais: 0/2
+✅ Environment Tools: Ferramentas OK (100%)
+✅ Environment Permissions: Permissões de escrita OK
+
+📊 Métricas e Monitoramento
+======================================================================
+✅ Metrics System: CPU: 15.1%, RAM: 67.2%
+✅ Metrics Collection: Coleta de métricas disponível
+✅ Metrics Monitoring: Monitoramento contínuo OK
+
+🚀 Deploy e Escalabilidade
+======================================================================
+✅ Scale Configuration: Pods: 10, Servers: 10, Clients: 100
+✅ Scale Parallel: Deploy paralelo suportado
+✅ Scale Resources: Limites de recursos configurados
+
+🔍 Versões e Dependências
+======================================================================
+✅ Python Version: 3.12.3
+✅ Docker Version: Docker version 28.1.1, build 4eba377
+✅ kubectl Version: Client Version: v1.30.0
+Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
+Server Version: v1.29.2
+⚠️  Python Dependencies: Versões diferentes: ['scipy==1.11.4 (requerido >= 1.7.0)', 'json5==0.12.0 (requerido >= 0.9.0)']
+
+🛠️ API do Gerenciador de Infraestrutura
+======================================================================
+✅ InfraManager API: Todos os métodos/aliases presentes
+
+🐳 Imagens Docker Essenciais
+======================================================================
+✅ Docker Images: Todas as imagens essenciais existem
+
+🐋 Compatibilidade de Imagens Docker e K8s
+======================================================================
+✅ Docker Images Exist: Todas as imagens essenciais existem
+✅ Docker Image Architecture: Arquitetura única: amd64
+✅ Kubernetes Version: Server Version: v1.29.2
+✅ Docker Image Age: Todas as imagens são recentes (<2 anos)
+
+🚦 Performance e Estabilidade (paralelo)
+======================================================================
+🧠 Gerenciador de Concorrência Inteligente inicializado
+   • CPU máximo: 80.0%
+   • Memória máxima: 85.0%
+   • Pods simultâneos: 12
+   • Testes simultâneos: 3
+🧹 Limpando dados anteriores...
+✅ Dados anteriores limpos
+🧠 Executor com controle de concorrência inteligente inicializado
+🚀 INICIANDO EXECUÇÃO DE TODOS OS TESTES
+🏗️  Configurando ambiente Kubernetes...
+🧪 Executando cenários para C (CONTROLADO)...
+📊 Total de combinações: 300
+🔄 Execuções por combinação: 10
+📈 Total de testes: 3000
+
+🎯 Combinação 1/300: 2s, 10c, 1m
+🧪 Teste slot adquirido (1/3)
+🔄 Executando run 1/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r1: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r1 - Combo 1/300, Run 1
+🧪 Teste slot liberado (0/3)
+🧪 Teste slot adquirido (1/3)
+🔄 Executando run 2/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r2: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r2 - Combo 1/300, Run 2
+🧪 Teste slot liberado (0/3)
+🧪 Teste slot adquirido (1/3)
+🔄 Executando run 3/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r3: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r3 - Combo 1/300, Run 3
+🧪 Teste slot liberado (0/3)
+🧪 Teste slot adquirido (1/3)
+🔄 Executando run 4/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r4: Latência=0.048s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r4 - Combo 1/300, Run 4
+🧪 Teste slot liberado (0/3)
+🧪 Teste slot adquirido (1/3)
+🔄 Executando run 5/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r5: Latência=0.050s, Throughput=1000.0 req/s
+📈 Adaptação: Aumentando testes simultâneos para 4
+📈 Adaptação: Reduzindo delay para 4.5s
+✅ c_2s_10c_1m_r5 - Combo 1/300, Run 5
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 6/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r6: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r6 - Combo 1/300, Run 6
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 7/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r7: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r7 - Combo 1/300, Run 7
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 8/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r8: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r8 - Combo 1/300, Run 8
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 9/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r9: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_1m_r9 - Combo 1/300, Run 9
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 10/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_1m_r10: Latência=0.050s, Throughput=1000.0 req/s
+📈 Adaptação: Reduzindo delay para 4.0s
+✅ c_2s_10c_1m_r10 - Combo 1/300, Run 10
+🧪 Teste slot liberado (0/4)
+� Combinação concluída: 10/10 sucessos (100.0%)
+⏳ Aguardando estabilização dos recursos (3.0s)...
+
+🎯 Combinação 2/300: 2s, 10c, 10m
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 1/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r1: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r1 - Combo 2/300, Run 1
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 2/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r2: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r2 - Combo 2/300, Run 2
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 3/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r3: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r3 - Combo 2/300, Run 3
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 4/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r4: Latência=0.052s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r4 - Combo 2/300, Run 4
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 5/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r5: Latência=0.050s, Throughput=1000.0 req/s
+📈 Adaptação: Reduzindo delay para 3.6s
+✅ c_2s_10c_10m_r5 - Combo 2/300, Run 5
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 6/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r6: Latência=0.048s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r6 - Combo 2/300, Run 6
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 7/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r7: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r7 - Combo 2/300, Run 7
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 8/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r8: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r8 - Combo 2/300, Run 8
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 9/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r9: Latência=0.049s, Throughput=1000.0 req/s
+✅ c_2s_10c_10m_r9 - Combo 2/300, Run 9
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 10/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_10m_r10: Latência=0.050s, Throughput=1000.0 req/s
+📈 Adaptação: Reduzindo delay para 3.3s
+✅ c_2s_10c_10m_r10 - Combo 2/300, Run 10
+🧪 Teste slot liberado (0/4)
+� Combinação concluída: 10/10 sucessos (100.0%)
+⏳ Aguardando estabilização dos recursos (3.0s)...
+
+🎯 Combinação 3/300: 2s, 10c, 100m
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 1/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r1: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r1 - Combo 3/300, Run 1
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 2/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r2: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r2 - Combo 3/300, Run 2
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 3/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r3: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r3 - Combo 3/300, Run 3
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 4/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r4: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r4 - Combo 3/300, Run 4
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 5/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r5: Latência=0.052s, Throughput=1000.0 req/s
+📈 Adaptação: Reduzindo delay para 3.0s
+✅ c_2s_10c_100m_r5 - Combo 3/300, Run 5
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 6/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r6: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r6 - Combo 3/300, Run 6
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 7/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r7: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r7 - Combo 3/300, Run 7
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 8/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r8: Latência=0.050s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r8 - Combo 3/300, Run 8
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 9/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r9: Latência=0.052s, Throughput=1000.0 req/s
+✅ c_2s_10c_100m_r9 - Combo 3/300, Run 9
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 10/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_100m_r10: Latência=0.049s, Throughput=1000.0 req/s
+📈 Adaptação: Reduzindo delay para 2.7s
+✅ c_2s_10c_100m_r10 - Combo 3/300, Run 10
+🧪 Teste slot liberado (0/4)
+� Combinação concluída: 10/10 sucessos (100.0%)
+⏳ Aguardando estabilização dos recursos (3.0s)...
+
+🎯 Combinação 4/300: 2s, 10c, 500m
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 1/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+✅ c_2s_10c_500m_r1: Latência=0.051s, Throughput=1000.0 req/s
+✅ c_2s_10c_500m_r1 - Combo 4/300, Run 1
+🧪 Teste slot liberado (0/4)
+🧪 Teste slot adquirido (1/4)
+🔄 Executando run 2/10...
+🚀 Deploy controlado de 2 servidores c...
+🔒 Pod slot adquirido (1/12)
+✅ Pod 1/2 criado
+🔒 Pod slot adquirido (2/12)
+✅ Pod 2/2 criado
+📊 Deploy concluído: 2/2 servidores
+⏳ Aguardando estabilização (3.0s)...
+🔓 Pod slot liberado (1/12)
+🔓 Pod slot liberado (0/12)
+🧪 Teste slot liberado (0/4)

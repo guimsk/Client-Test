@@ -1,5 +1,5 @@
-# SISTEMA V6 - DEPENDÊNCIAS PYTHON
-# Dependências para análise estatística avançada e visualização
+# SISTEMA V6 - DEPENDÊNCIAS PYTHON - OTIMIZADO PARA MÁXIMA VELOCIDADE
+# Dependências para análise estatística avançada, visualização e processamento paralelo
 
 # Análise de dados e estatística
 numpy>=1.21.0
@@ -9,8 +9,9 @@ scipy>=1.7.0
 # Visualização e gráficos
 matplotlib>=3.5.0
 seaborn>=0.11.0
+plotly>=5.0.0
 
-# Sistema
+# Sistema e monitoramento
 psutil>=5.8.0
 
 # Processamento JSON
@@ -21,9 +22,15 @@ docker>=6.0.0
 kubernetes>=28.0.0
 PyYAML>=6.0.0
 
+# Processamento assíncrono e paralelo
+asyncio-pool>=0.6.0
+aiofiles>=0.7.0
+aiodns>=3.0.0
+
 # Testes e validação
 pytest>=6.2.0
 pytest-cov>=2.12.0
+pytest-asyncio>=0.21.0
 
 # Desenvolvimento
 black>=21.0.0

@@ -1,0 +1,629 @@
+{
+  "total_tests": 129,
+  "passed_tests": 125,
+  "failed_tests": 0,
+  "warnings": 4,
+  "results": {
+    "Import config": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory config": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Import infrastructure_manager": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory infrastructure_manager": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Import test_executor": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Import concurrency_manager": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory concurrency_manager": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Import result_analyzer": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory result_analyzer": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Import chart_generator": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory chart_generator": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Import resource_monitor": {
+      "description": "Módulo importado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "Factory resource_monitor": {
+      "description": "Função factory funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Config.LANGUAGES": {
+      "description": "Atributo presente: ['c', 'cpp']",
+      "passed": true,
+      "warning": false
+    },
+    "Config.SERVERS": {
+      "description": "Atributo presente: [2, 4, 6, 8, 10]",
+      "passed": true,
+      "warning": false
+    },
+    "Config.CLIENTS": {
+      "description": "Atributo presente: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]",
+      "passed": true,
+      "warning": false
+    },
+    "Config.MESSAGES": {
+      "description": "Atributo presente: [1, 10, 100, 500, 1000, 10000]",
+      "passed": true,
+      "warning": false
+    },
+    "Config.DOCKER_USERNAME": {
+      "description": "Atributo presente: guimsk",
+      "passed": true,
+      "warning": false
+    },
+    "Config.K8S_NAMESPACE": {
+      "description": "Atributo presente: scalability-test",
+      "passed": true,
+      "warning": false
+    },
+    "Config.RESULTS_DIR": {
+      "description": "Atributo presente: /home/guimsk/Faculdade/Rede de computadores/TarefaV4/core/resultados",
+      "passed": true,
+      "warning": false
+    },
+    "Config Paralela": {
+      "description": "Execução sequencial configurada",
+      "passed": true,
+      "warning": false
+    },
+    "Config Batch": {
+      "description": "Batch size conservador: 1",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Instalação": {
+      "description": "Docker disponível: Docker version 28.1.1, build 4eba377",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Daemon": {
+      "description": "Docker daemon ativo",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Image guimsk/servidor-c:latest": {
+      "description": "Imagem encontrada",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Image guimsk/servidor-cpp:latest": {
+      "description": "Imagem encontrada",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Image guimsk/cliente:latest": {
+      "description": "Imagem encontrada",
+      "passed": true,
+      "warning": false
+    },
+    "DockerManager": {
+      "description": "Classe instanciada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "DockerManager.build_and_push_all": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "DockerManager.build_image": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "DockerManager.push_image": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "kubectl": {
+      "description": "Cliente kubectl disponível",
+      "passed": true,
+      "warning": false
+    },
+    "K8s Cluster": {
+      "description": "Cluster acessível",
+      "passed": true,
+      "warning": false
+    },
+    "K8s Nodes": {
+      "description": "1 nodes disponíveis",
+      "passed": true,
+      "warning": false
+    },
+    "K8s Namespace": {
+      "description": "Namespace scalability-test existe",
+      "passed": true,
+      "warning": false
+    },
+    "KubernetesManager": {
+      "description": "Classe instanciada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "K8sManager.setup_namespace": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "K8sManager.deploy_server": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "K8sManager.cleanup_resources": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "InfrastructureManager": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.docker": {
+      "description": "DockerManager presente",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.k8s": {
+      "description": "KubernetesManager presente",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.setup_infrastructure": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.cleanup_all": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.build_and_push_all": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.deploy_servers": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager.wait_for_pods_ready": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ConcurrencyManager": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "ConcurrencyManager.status": {
+      "description": "Status de recursos funcional",
+      "passed": true,
+      "warning": false
+    },
+    "ConcurrencyManager.pods": {
+      "description": "Controle de pod slots funcional",
+      "passed": true,
+      "warning": false
+    },
+    "ConcurrencyManager.tests": {
+      "description": "Controle de test slots funcional",
+      "passed": true,
+      "warning": false
+    },
+    "ConcurrencyManager.adapt": {
+      "description": "Sistema de adaptação funcional",
+      "passed": true,
+      "warning": false
+    },
+    "TestExecutor": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "TestScenario": {
+      "description": "Cenário criado com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "TestExecutor.run_all_tests": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "TestExecutor.run_single_scenario": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "TestExecutor.get_results": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ResultAnalyzer": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "ResultAnalyzer.analyze_results": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ResultAnalyzer.generate_summary": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ResultAnalyzer.export_results": {
+      "description": "Método disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ChartGenerator": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "ChartGenerator.plotly": {
+      "description": "Plotly disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ChartGenerator.pandas": {
+      "description": "Pandas disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ChartGenerator.3d": {
+      "description": "Método de gráficos 3D disponível",
+      "passed": true,
+      "warning": false
+    },
+    "ResourceMonitor": {
+      "description": "Instância criada com sucesso",
+      "passed": true,
+      "warning": false
+    },
+    "ResourceMonitor.psutil": {
+      "description": "Psutil disponível",
+      "passed": true,
+      "warning": false
+    },
+    "App Dir applications/cliente": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "App File applications/cliente/app.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "App File applications/cliente/Dockerfile": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "App Dir applications/servidor": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "App File applications/servidor/Dockerfile": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "App Dir applications/servidor-c": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "App File applications/servidor-c/Dockerfile": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/config.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/infrastructure_manager.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/test_executor.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/concurrency_manager.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/result_analyzer.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/chart_generator.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File core/resource_monitor.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File executar.py": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "File requirements.txt": {
+      "description": "Arquivo presente",
+      "passed": true,
+      "warning": false
+    },
+    "Dir config": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "Dir applications": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "Dir resultados": {
+      "description": "Diretório presente",
+      "passed": true,
+      "warning": false
+    },
+    "Port config.py": {
+      "description": "Porta 8000 presente",
+      "passed": true,
+      "warning": false
+    },
+    "Port applications/servidor/Dockerfile": {
+      "description": "Porta 8000 presente",
+      "passed": true,
+      "warning": false
+    },
+    "Port applications/servidor-c/Dockerfile": {
+      "description": "Porta 8000 presente",
+      "passed": true,
+      "warning": false
+    },
+    "Data Results Dir": {
+      "description": "Diretório de resultados existe",
+      "passed": true,
+      "warning": false
+    },
+    "Data Graphics Dir": {
+      "description": "Diretório de gráficos existe",
+      "passed": true,
+      "warning": false
+    },
+    "Security sudo": {
+      "description": "Nenhum sudo hardcoded encontrado",
+      "passed": true,
+      "warning": false
+    },
+    "Perf Pods": {
+      "description": "Limite conservador de pods: 12",
+      "passed": true,
+      "warning": false
+    },
+    "Perf Threads": {
+      "description": "Threads conservadoras: 2",
+      "passed": true,
+      "warning": false
+    },
+    "Integration Chain": {
+      "description": "Cadeia de componentes funcional",
+      "passed": true,
+      "warning": false
+    },
+    "Integration Executor-Concurrency": {
+      "description": "Executor usa concorrência",
+      "passed": true,
+      "warning": false
+    },
+    "Python Version": {
+      "description": "3.12.3",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Version": {
+      "description": "Docker version 28.1.1, build 4eba377",
+      "passed": true,
+      "warning": false
+    },
+    "kubectl Version": {
+      "description": "Client Version: v1.30.0\nKustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3\nServer Version: v1.29.2",
+      "passed": "Client Version: v1.30.0\nKustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3\nServer Version: v1.29.2",
+      "warning": false
+    },
+    "Kubernetes Version": {
+      "description": "Server Version: v1.29.2",
+      "passed": true,
+      "warning": false
+    },
+    "Python Dependencies": {
+      "description": "Versões diferentes: ['scipy==1.11.4 (requerido >= 1.7.0)', 'json5==0.12.0 (requerido >= 0.9.0)']",
+      "passed": true,
+      "warning": true
+    },
+    "Core Imports": {
+      "description": "Todos os módulos principais importados",
+      "passed": true,
+      "warning": false
+    },
+    "Core API Integration": {
+      "description": "Módulos principais integrados",
+      "passed": true,
+      "warning": false
+    },
+    "Robustness Error Handling": {
+      "description": "Nenhum bloco try/except encontrado nos módulos principais",
+      "passed": true,
+      "warning": true
+    },
+    "Robustness Recovery": {
+      "description": "Métodos de recuperação presentes",
+      "passed": true,
+      "warning": false
+    },
+    "Robustness Timeouts": {
+      "description": "Timeouts configurados",
+      "passed": true,
+      "warning": false
+    },
+    "Quality Documentation": {
+      "description": "Documentação limitada (25%)",
+      "passed": false,
+      "warning": true
+    },
+    "Quality File Size": {
+      "description": "Tamanhos de arquivo OK",
+      "passed": true,
+      "warning": false
+    },
+    "Quality Imports": {
+      "description": "Estrutura de imports OK",
+      "passed": true,
+      "warning": false
+    },
+    "Environment Required": {
+      "description": "Variáveis requeridas OK",
+      "passed": true,
+      "warning": false
+    },
+    "Environment Optional": {
+      "description": "Variáveis opcionais: 0/2",
+      "passed": true,
+      "warning": false
+    },
+    "Environment Tools": {
+      "description": "Ferramentas OK (100%)",
+      "passed": true,
+      "warning": false
+    },
+    "Environment Permissions": {
+      "description": "Permissões de escrita OK",
+      "passed": true,
+      "warning": false
+    },
+    "Metrics System": {
+      "description": "CPU: 15.0%, RAM: 62.9%",
+      "passed": true,
+      "warning": false
+    },
+    "Metrics Collection": {
+      "description": "Coleta de métricas disponível",
+      "passed": true,
+      "warning": false
+    },
+    "Metrics Monitoring": {
+      "description": "Monitoramento contínuo OK",
+      "passed": true,
+      "warning": false
+    },
+    "Scale Configuration": {
+      "description": "Pods: 12, Servers: 10, Clients: 100",
+      "passed": true,
+      "warning": false
+    },
+    "Scale Parallel": {
+      "description": "Deploy paralelo suportado",
+      "passed": true,
+      "warning": false
+    },
+    "Scale Resources": {
+      "description": "Limites de recursos configurados",
+      "passed": true,
+      "warning": false
+    },
+    "InfraManager API": {
+      "description": "Todos os métodos/aliases presentes",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Images": {
+      "description": "Todas as imagens essenciais existem",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Images Exist": {
+      "description": "Todas as imagens essenciais existem",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Image Architecture": {
+      "description": "Arquitetura única: amd64",
+      "passed": true,
+      "warning": false
+    },
+    "Docker Image Age": {
+      "description": "Todas as imagens são recentes (<2 anos)",
+      "passed": true,
+      "warning": false
+    }
+  },
+  "timestamp": "2025-07-13T15:17:13.972097"
+}

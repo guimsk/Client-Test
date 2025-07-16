@@ -1,24 +1,32 @@
-# Usa imagem oficial do GCC 13 como base
+# Dockerfile otimizado para build rápido - Servidor C++
 FROM gcc:13
 
-# Instala dependências: netcat para health checks
-RUN apt-get update && apt-get install -y netcat-openbsd && rm -rf /var/lib/apt/lists/*
+# Instalar dependências em uma única camada para aproveitar cache
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    netcat-openbsd \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
-# Define diretório de trabalho dentro do container
+# Define diretório de trabalho
 WORKDIR /app
 
-# Copia código fonte C++ para o container
+# Copia código fonte C++ (usar .dockerignore para otimizar)
 COPY app_configurable.cpp .
 
-# Compila aplicação C++ com flags de otimização
-# -std=c++17: Usa padrão C++17
-# -pthread: Habilita suporte a threads POSIX
-RUN g++ -std=c++17 -pthread app_configurable.cpp -o servidor
+# Compilação otimizada para performance máxima
+# -O3: Otimização máxima
+# -march=native: Otimizar para CPU atual  
+# -flto: Link Time Optimization
+# -std=c++17: C++17 standard
+# -pthread: POSIX threads
+RUN g++ -std=c++17 -pthread -O3 -march=native -flto \
+    -ffast-math -funroll-loops \
+    app_configurable.cpp -o servidor \
+    && strip servidor
 
-# Expõe porta 8000 para comunicação externa
+# Expõe porta 8000 (padrão compatível com configuração)
 EXPOSE 8000
 
-# Comando padrão para executar o servidor
-# A porta será passada como argumento pelo Kubernetes
+# Comando otimizado
 ENTRYPOINT ["./servidor"]
 CMD ["8000"]

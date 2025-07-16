@@ -1,0 +1,24 @@
+# .dockerignore para otimizar build do cliente Python
+*.md
+*.txt
+README*
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.coverage
+test_*
+*.test
+*.log
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+venv/
+env/
+.env

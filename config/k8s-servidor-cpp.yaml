@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servidor-cpp
+  namespace: scalability-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: servidor-cpp
+  template:
+    metadata:
+      labels:
+        app: servidor-cpp
+    spec:
+      containers:
+      - name: servidor-cpp
+        image: guimsk/servidor-cpp:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 681Mi
+          limits:
+            cpu: 200m
+            memory: 1362Mi
+      env:
+        - name: SERVER_LANGUAGE
+          value: "cpp"

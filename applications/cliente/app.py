@@ -17,8 +17,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 @dataclass
-class TestResult:
-    """Resultado de teste individual"""
+class ClientTestResult:
+    """Resultado de teste individual do cliente"""
     success: bool
     duration: float
     latency_avg: float
@@ -112,7 +112,7 @@ class KubernetesClient:
             "total_time": total_time
         }
     
-    def run_test(self) -> TestResult:
+    def run_test(self) -> ClientTestResult:
         """Executar teste completo"""
         print(f"🧪 Iniciando teste: {self.num_clients} clientes, {self.messages_per_client} mensagens")
         print(f"📡 Servidores: {self.servers}")
@@ -160,7 +160,7 @@ class KubernetesClient:
         server_ports = [port for _, port in self.servers]
         container_ids = [os.getenv("HOSTNAME", "unknown")]
         
-        return TestResult(
+        return ClientTestResult(
             success=success,
             duration=total_time,
             latency_avg=latency_avg,
